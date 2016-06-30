@@ -5,7 +5,7 @@ defmodule TestApi.Item do
     field :name, :string
     field :description, :string
     field :category, :string
-    field :price, :float, default 0.00
+    field :price, :float, default: 0.00
     field :ingredients, :string
 
     timestamps

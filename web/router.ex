@@ -19,8 +19,10 @@ defmodule TestApi.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", TestApi do
-  #   pipe_through :api
-  # end
+   #Other scopes may use custom stacks.
+   
+   scope "/api", TestApi do
+     pipe_through :api
+     resources "/items", ItemController, except: [:new, :edit]
+   end
 end
